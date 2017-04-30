@@ -2,7 +2,10 @@ const config = {
     output: "dist",
     electron: "node_modules/electron/dist/**/*",
     tsConfig: "tsconfig.json",
-    tsSource: "app/**/*.ts",
+    tsSource: [
+        "app/**/*.ts",
+        "app/**/*.tsx"
+    ],
     tsOutput: "dist/resources/app",
     resources: [
         "app/**/*",
@@ -17,6 +20,7 @@ const del = require("del");
 const ts = require("gulp-typescript");
 const runSequence = require("run-sequence");
 const util = require("gulp-util");
+const sourcemaps = require('gulp-sourcemaps');
 
 const logSuccess = function() {
     util.log(util.colors.green("SUCCESS!"));
@@ -33,8 +37,14 @@ gulp.task("electron-copy", function() {
 
 gulp.task("ts-compile", function() {
     const tsProject = ts.createProject(config.tsConfig);
-    const tsResult = gulp.src(config.tsSource).pipe(tsProject());
-    return tsResult.js.pipe(gulp.dest(config.tsOutput));
+    const tsResult = gulp.src(config.tsSource)
+        .pipe(sourcemaps.init())
+        .pipe(tsProject());
+    return tsResult.js
+        .pipe(sourcemaps.write('.', {
+            sourceRoot: function(file) { return file.cwd + '/app'; }
+        }))
+        .pipe(gulp.dest(config.tsOutput));
 });
 
 gulp.task("resources-copy", function() { 

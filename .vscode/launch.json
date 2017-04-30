@@ -8,7 +8,7 @@
             "program": "${workspaceRoot}/dist/resources/app/Main.js",
             "runtimeExecutable": "${workspaceRoot}/dist/electron.exe",
             "cwd": "${workspaceRoot}/dist",
-            //"sourceMaps": true,
+            "sourceMaps": true,
             "preLaunchTask": "build"
         },
         {

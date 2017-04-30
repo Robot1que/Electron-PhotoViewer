@@ -11,7 +11,7 @@
         "emitDecoratorMetadata": true,
 
         // OUTPUT
-        //"sourceMap": true,
+        "sourceMap": true,
         //"diagnostics": true,
         //"listEmittedFiles": true,
         //"listFiles": true,

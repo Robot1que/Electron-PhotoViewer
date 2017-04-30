@@ -1,0 +1,44 @@
+@import url("../animations/fadein.css");
+
+div.caption {
+    font-size: 12pt;
+    line-height: 45px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: rgba(30,30,30, .85);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: 4px;
+    padding: 0 8px;
+}
+
+div.itemPreviewContainer {
+    height: 160px;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.itemPreview {
+    width: 100%;
+}
+
+.itemPreview-loaded {
+    animation-name: fadein;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+}
+
+a.selectable {
+    padding: 4px;
+    display: block;
+    color: #cccccc;
+    text-decoration: none;
+}
+
+a.selectable:hover {
+    background: #464646;
+}

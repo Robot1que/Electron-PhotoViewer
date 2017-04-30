@@ -1,0 +1,52 @@
+.photoViewer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.photoViewer-container-background {
+    background-color: #000000;
+}
+
+.photoViewer-content-horizontal {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.photoViewer-content-vertical {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.photoViewer-next {
+    width: 100px;
+    height: 100%;
+    display: block;
+    float: right;
+    background-color: rgba(1,1,1,0);
+}
+
+.photoViewer-next:hover {
+    background-color: rgba(1,1,1,0.1);
+}
+
+.photoViewer-prev {
+    width: 100px;
+    height: 100%;
+    display: block;
+    float: left;
+    background: rgba(1,1,1,0);
+}
+
+.photoViewer-prev:hover {
+    background-color: rgba(1,1,1,0.1);
+}

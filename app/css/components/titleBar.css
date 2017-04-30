@@ -1,0 +1,29 @@
+.titleBar-panel {
+    height: 45px;
+    width: 100%;
+    background-color: #252526;
+}
+
+.titleBar-btn-menu {
+    display: block;
+    height: 45px;
+    width: 45px;
+    min-width: 45px;
+    line-height: 45px;
+    text-align: left;
+    cursor: default;
+    color: #cccccc;
+    text-decoration: none;
+    border: none;
+    margin: 0;
+    padding: 0px 0px 0px 45px;
+    background-color: #252526;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url(../../resources/icons/menu.svg) ;
+    background-position-x: 10.5px;
+}
+
+.titleBar-btn-menu:hover {
+    background-color: #2A2D2E;
+}

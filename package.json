@@ -1,0 +1,55 @@
+{
+  "name": "onedrive-client",
+  "version": "0.0.1",
+  "description": "Node",
+  "main": "app/Main.js",
+  "private": true,
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Robot1que/node#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/tsc -p ./tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Robot1que@bitbucket.org/Robot1que/node.git"
+  },
+  "dependencies": {
+    "async-file": "^2.0.2",
+    "electron": "^1.6.6",
+    "history": "^4.6.1",
+    "http-status-codes": "^1.0.6",
+    "inversify": "^4.1.0",
+    "inversify-inject-decorators": "^3.0.0-beta.2",
+    "mongodb": "^2.2.19",
+    "open": "0.0.5",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^4.1.1",
+    "reflect-metadata": "^0.1.9"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/chai-as-promised": "0.0.30",
+    "@types/electron": "^1.4.29",
+    "@types/history": "^4.5.0",
+    "@types/http-status-codes": "^1.0.29",
+    "@types/mocha": "^2.2.35",
+    "@types/mongodb": "^2.1.36",
+    "@types/node": "^7.0.14",
+    "@types/open": "0.0.29",
+    "@types/react": "^15.0.23",
+    "@types/react-dom": "^15.5.0",
+    "@types/react-router": "^4.0.5",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.6",
+    "gulp-util": "^3.0.8",
+    "mocha": "^3.2.0",
+    "run-sequence": "^1.2.2",
+    "typescript": "2.2.2"
+  }
+}

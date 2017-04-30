@@ -1,0 +1,8 @@
+.mainRegion {
+    position: absolute;
+    left: 45px;
+    right: 0px;
+    top: 45px;
+    bottom: 0px;
+    overflow-y: auto;
+}

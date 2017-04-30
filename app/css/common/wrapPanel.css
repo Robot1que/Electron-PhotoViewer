@@ -1,0 +1,10 @@
+div.wrapPanel {
+    font-size: 0px;
+    overflow-x: hidden;
+}
+
+div.wrapPanelItem {
+    display: inline-block;
+    position: relative;
+    opacity: 1;
+}

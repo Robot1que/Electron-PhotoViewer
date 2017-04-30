@@ -1,0 +1,53 @@
+@import url("common/buttons.css");
+@import url("common/descList.css");
+@import url("common/icons.css");
+@import url("common/links.css");
+@import url("common/overlay.css");
+@import url("common/wrapPanel.css");
+@import url("common/spinner.css");
+
+@import url("components/main.css");
+@import url("components/mainMenu.css");
+@import url("components/item.css");
+@import url("components/settings.css");
+@import url("components/syncProgress.css");
+@import url("components/error.css");
+@import url("components/photoViewer.css");
+@import url("components/titleBar.css");
+
+body {
+    margin: 0px;
+    font-family: "Segoe UI Light";
+    background-color: #1e1e1e;
+    color: #cccccc;
+    overflow-y: hidden;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+form {
+    margin: 0px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-family: "Segoe UI";
+    font-size: 20pt;
+    margin: 4px 4px 12px 4px;
+}
+
+:focus {
+    outline: none;
+}
+
+.hidden {
+    opacity: 0;
+}

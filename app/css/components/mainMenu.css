@@ -1,0 +1,51 @@
+.mainMenu-panel {
+    position: absolute;
+    width: 45px;
+    top: 45px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #252526;
+    overflow: hidden;
+    transition: .3s;
+    z-index: 1;
+}
+
+.mainMenu-panel-opened {
+    width: 250px;
+}
+
+.mainMenu-bottom {
+    position: absolute;
+    bottom: 0px;
+}
+
+.mainMenu-btn {
+    display: block;
+    height: 45px;
+    width: 250px;
+    line-height: 45px;
+    text-align: left;
+    cursor: default;
+    color: #cccccc;
+    background-color: #252526;
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-decoration: none;
+    border: none;
+    margin: 0;
+    padding: 0px 0px 0px 45px;
+}
+
+.mainMenu-btn:hover {
+    background-color: #2A2D2E;
+}
+
+.mainMenu-icon-sync {
+    background-image: url(../../resources/icons/sync.svg) ;
+    background-position-x: 10.5px;
+}
+
+.mainMenu-icon-settings {
+    background-image: url(../../resources/icons/settings.svg) ;
+    background-position-x: 10.5px;
+}

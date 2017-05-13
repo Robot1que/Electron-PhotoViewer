@@ -45,7 +45,7 @@ export class ItemList extends React.Component<Props, State> {
     @lazyInject(Types.NavigationServie)
     private _navigationServie: INavigationServie;
 
-    constructor(props: any) {
+    constructor(props: Props) {
         super(props);
 
         this.state = this.cleanStateGet();

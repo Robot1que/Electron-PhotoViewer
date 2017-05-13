@@ -1,5 +1,7 @@
 import { ipcRenderer } from "electron";
 import * as React from "react";
+import { Route } from "react-router";
+import { ItemList } from "./ItemList";
 import { lazyInject } from "../code/Container";
 import { Types } from "../code/Types";
 import { MainMenu } from "./MainMenu";
@@ -9,7 +11,7 @@ import { TitleBar } from "./TitleBar";
 import { INavigationServie } from "../code/services/NavigationService";
 import { Channels } from "../IpcChannels";
 
-class State {
+export class State {
     constructor(
         readonly isBlurEnabled?: boolean
     ) {
@@ -39,7 +41,15 @@ export class Main extends React.Component<any, State> {
                 <TitleBar />
                 <MainMenu />
                 <div className="mainRegion">
-                    {this.props.children}
+                    <Route
+                        exact={true}
+                        path="/folders"
+                        component={(props) => <ItemList {...props} />} 
+                    />
+                    <Route 
+                        path="/folders/:folderId"
+                        component={(props) => <ItemList {...props} />} 
+                    />
                 </div>
             </div>
             <PhotoViewer />

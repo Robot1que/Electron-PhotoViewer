@@ -37,9 +37,12 @@ gulp.task("electron-copy", function() {
 
 gulp.task("ts-compile", function() {
     const tsProject = ts.createProject(config.tsConfig);
+    let hasErrors = false;
     const tsResult = gulp.src(config.tsSource)
         .pipe(sourcemaps.init())
-        .pipe(tsProject());
+        .pipe(tsProject())
+        .on('error', function () { hasErrors = true; })
+        .on('finish', function () { hasErrors && process.exit(1); });
     return tsResult.js
         .pipe(sourcemaps.write('.', {
             sourceRoot: function(file) { return file.cwd + '/app'; }

@@ -41,9 +41,9 @@
   dependencies:
     "@types/node" "*"
 
-"@types/history@*", "@types/history@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.5.0.tgz#2f5c3aad4fbd00f89e99b83083e354bc5308e307"
+"@types/history@*", "@types/history@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.5.1.tgz#da4a145410466eac20e94b51c8778a7551d1d4db"
 
 "@types/http-status-codes@^1.0.29":
   version "1.0.29"
@@ -53,16 +53,20 @@
   version "2.2.41"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.41.tgz#e27cf0817153eb9f2713b2d3f6c68f1e1c3ca608"
 
-"@types/mongodb@^2.1.36":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-2.2.0.tgz#715adcf0e1d615f2f3100d3b879124e799fe1b4c"
+"@types/mongodb@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-2.2.2.tgz#3edd247936c2fdb4e1cbeca6a0affec9fa656b56"
   dependencies:
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^7.0.14":
+"@types/node@*":
   version "7.0.14"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.14.tgz#1470fa002a113316ac9d9ad163fc738c7a0de2a4"
+
+"@types/node@^7.0.18":
+  version "7.0.18"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.18.tgz#cd67f27d3dc0cfb746f0bdd5e086c4c5d55be173"
 
 "@types/open@0.0.29":
   version "0.0.29"
@@ -74,16 +78,16 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-router@^4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.5.tgz#ad64f1064ff428b0ad67f5e87c5cbc2c46920e26"
+"@types/react-router@^4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.9.tgz#ff43a8e842358891d4d0c7acf0d11023b7951de9"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^15.0.23":
-  version "15.0.23"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.23.tgz#f3facbef5290610f54242f00308759d3a3c27346"
+"@types/react@*", "@types/react@^15.0.24":
+  version "15.0.24"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.24.tgz#8a75299dc37906df327c18ca918bf97a55e7123b"
 
 acorn@4.X:
   version "4.0.11"
@@ -2348,9 +2352,9 @@ typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.2.2.tgz#606022508479b55ffa368b58fee963a03dfd7b0c"
+typescript@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.2.tgz#f0f045e196f69a72f06b25fd3bd39d01c3ce9984"
 
 ua-parser-js@^0.7.9:
   version "0.7.12"

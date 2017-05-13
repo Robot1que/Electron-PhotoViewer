@@ -112,7 +112,7 @@ export class SyncProgress extends React.Component<Props, State> {
         }
         
         progressReport = 
-            new ProgressReport("Found photoes information is being cached in the local storage.");
+            new ProgressReport("Found photos information is being cached in the local storage.");
         progressReport.details = "Preparing local storage..."
         this.reportProgress(progressReport);
 

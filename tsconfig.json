@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "target": "ES6",
-        "lib": ["es6", "dom"],
         "types": ["reflect-metadata"],
         "moduleResolution": "node",
         "module": "commonjs",

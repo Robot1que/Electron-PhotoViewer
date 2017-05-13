@@ -1,4 +1,4 @@
-import open = require("open");
+const open = require("open");
 import { lazyInject } from "../code/Container";
 import { Types } from "../code/Types";
 import * as React from "react";

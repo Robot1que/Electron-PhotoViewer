@@ -10,7 +10,7 @@ export function register(webContents: Electron.WebContents): void {
         webContents.send(Channels.showSyncProgressRequested);
     });
 
-    ipcMain.on(Channels.showErrorRequested, (event, args) => {
+    ipcMain.on(Channels.showErrorRequested, (_event, args,) => {
         webContents.send(Channels.showErrorRequested, args);
     });
 
@@ -18,7 +18,7 @@ export function register(webContents: Electron.WebContents): void {
         webContents.send(Channels.hideRequested);
     });
 
-    ipcMain.on("open-photo", (event, arg1, arg2) => {
+    ipcMain.on("open-photo", (_event, arg1, arg2) => {
         webContents.send("open-photo", arg1, arg2);
     });
 }

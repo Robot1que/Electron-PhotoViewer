@@ -1,4 +1,3 @@
-import { ipcRenderer } from "electron";
 import { lazyInject } from "../code/Container";
 import { Types } from "../code/Types";
 import * as React from "react";
@@ -6,7 +5,6 @@ import { Overlay } from "./common/Overlay";
 import { Settings } from "./Settings";
 import { SyncProgress } from "./SyncProgress";
 import { ErrorBox } from "./ErrorBox";
-import { PhotoViewer } from "./PhotoViewer";
 import { IMessageService } from "../code/services/MessageService";
 
 class Props {
@@ -35,11 +33,11 @@ export class MessageBox extends React.Component<Props, State> {
 
     componentDidMount(): void {
         this._messageService.showSettingsRequested.subscribe(
-            (args) => this.update(() => this.getSettings())
+            (_args) => this.update(() => this.getSettings())
         );
 
         this._messageService.showSyncProgressRequested.subscribe(
-            (args) => this.update(() => this.getSyncProgress())
+            (_args) => this.update(() => this.getSyncProgress())
         );
 
         this._messageService.showErrorRequested.subscribe(
@@ -50,7 +48,7 @@ export class MessageBox extends React.Component<Props, State> {
         );
 
         this._messageService.hideRequested.subscribe(
-            (args) => {
+            (_args) => {
                 this.update(() => null);
             } 
         );

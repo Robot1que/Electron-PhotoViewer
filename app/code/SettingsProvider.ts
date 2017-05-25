@@ -1,5 +1,4 @@
 import * as fs from "async-file";
-import * as path from "path";
 import { injectable } from "inversify";
 import { File } from "./utils/File";
 

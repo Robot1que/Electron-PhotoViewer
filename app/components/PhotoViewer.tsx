@@ -1,6 +1,5 @@
 import { ipcRenderer, remote } from "electron";
 import * as React from "react";
-import { Spinner } from "./common/Spinner";
 import { lazyInject } from "../code/Container";
 import { Types } from "../code/Types";
 import { IPhotoRepository } from "../code/services/PhotoRepository";
@@ -53,7 +52,7 @@ export class PhotoViewer extends React.Component<Props, State> {
     async componentDidMount() {
         try {
             remote.getCurrentWindow().on("resize", () => this.onResize());
-            ipcRenderer.on("open-photo", (event, photoIds, num) => this.onPhotoOpen(photoIds, num));
+            ipcRenderer.on("open-photo", (_event, photoIds, num) => this.onPhotoOpen(photoIds, num));
         }
         catch(error) {
             this.onError(error);

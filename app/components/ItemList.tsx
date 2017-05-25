@@ -32,7 +32,6 @@ export class ItemList extends React.Component<Props, State> {
     private readonly _sizeChangeLogicDelay: number = 100;
 
     private _loadedItemCount: number = 0;
-    private _loadedItemIds: string[];
     private _columnCount: number = 0;
     private _sizeChangeTime: number;
 
@@ -153,7 +152,7 @@ export class ItemList extends React.Component<Props, State> {
         }
     }
 
-    private async onItemLoad(id: string) {
+    private async onItemLoad(_id: string) {
         ++this._loadedItemCount;
 
         if (this.state.items && this._loadedItemCount === this.state.items.length) {
@@ -165,8 +164,6 @@ export class ItemList extends React.Component<Props, State> {
             }
         }
     }
-
-    private _counter: number = 0;
 
     private onRootPanelLoad() {
         this.setItemSize();

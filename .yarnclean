@@ -1,6 +1,6 @@
 # test directories
 __tests__
-test
+#test - required by tslint
 tests
 powered-test
 

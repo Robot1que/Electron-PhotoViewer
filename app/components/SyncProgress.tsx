@@ -3,7 +3,6 @@ import { Types } from "../code/Types";
 import * as React from "react";
 import { Spinner } from "./common/Spinner";
 import * as OneDrive from "../code/services/onedrive/ServiceFactory";
-import { IService as IOneDriveService } from "../code/services/onedrive/Service";
 import * as Entities from "../code/services/onedrive/Entities";
 import { IStorageFactory, IStorage } from "../code/services/DataStorage";
 import { IPhotoRepository } from "../code/services/PhotoRepository";
@@ -121,7 +120,7 @@ export class SyncProgress extends React.Component<Props, State> {
 
         progressReport.details = "Caching root folder..."
         this.reportProgress(progressReport);
-        await this.cacheItems(oneDriveService, storage, items);
+        await this.cacheItems(storage, items);
 
         var folders = items.filter((item) => item.folder ? true : false)
         for(let item of folders) {
@@ -129,14 +128,13 @@ export class SyncProgress extends React.Component<Props, State> {
             this.reportProgress(progressReport);
 
             items = await oneDriveService.folderChildrenGet(item.id);
-            await this.cacheItems(oneDriveService, storage, items);
+            await this.cacheItems(storage, items);
         }
 
         await storage.dispose();
     }
 
     private async cacheItems(
-        oneDriveService: IOneDriveService,
         storage: IStorage, 
         items: Entities.Item[]
     ) {
@@ -151,7 +149,7 @@ export class SyncProgress extends React.Component<Props, State> {
                 itemInProgress.map(
                     item =>
                         new Promise<void>(
-                            async (resolve, reject) => {
+                            async (resolve, _reject) => {
                                 await this.convertUrlToLocal(item);
                                 resolve();
                             }

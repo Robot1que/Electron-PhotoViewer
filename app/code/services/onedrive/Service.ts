@@ -1,7 +1,6 @@
 import * as http from "http";
 import * as https from "https";
 import * as HttpStatus from "http-status-codes";
-import * as fs from "async-file";
 import { ItemArray } from "./Entities";
 import { HttpHelper } from "../../utils/HttpHelper";
 

@@ -1,5 +1,5 @@
 import { injectable } from "inversify";
-import { ipcRenderer, ipcMain } from "electron";
+import { ipcRenderer } from "electron";
 import { IEvent, EventDispatcher, EventArgs } from "../utils/Events";
 import { Channels, ShowErrorRequestedArgs } from "../../IpcChannels";
 
@@ -71,7 +71,7 @@ export class MessageService implements IMessageService {
 
         ipcRenderer.on(
             Channels.showErrorRequested,
-            (event, args) => {
+            (_event, args) => {
                 this._showErrorRequested.dispatch(new ShowErrorRequestedArgs(args as string)); 
             }
         );
